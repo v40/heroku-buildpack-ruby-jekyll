@@ -5,8 +5,8 @@ Heroku Ruby Jekyll Buildpack is a fork of Heroku's [official Ruby buildpack](htt
 
 With this [buildpack](http://devcenter.heroku.com/articles/buildpacks) you no longer need pre-build the site or commit the _site build directory to your repo. This simplifies the deployment process and keeps the repo clean. All of the standard Ruby tools are maintained in this buildpack, so you can take full advantage of Rack middleware and other useful tools from the Ruby ecosystem.
 
-Usage
------
+
+## Usage
 
     heroku create --buildpack http://github.com/mattmanning/heroku-buildpack-ruby-jekyll.git
 
