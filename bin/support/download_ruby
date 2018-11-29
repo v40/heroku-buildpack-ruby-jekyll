@@ -6,7 +6,6 @@ $stdout.sync = true
 
 $:.unshift File.expand_path("../../../lib", __FILE__)
 require "language_pack"
-require "language_pack/helpers/bundle_wrapper"
 
 DEFAULT_STACK = "cedar-14"
 
