@@ -6,9 +6,12 @@ $stdout.sync = true
 
 $:.unshift File.expand_path("../../../lib", __FILE__)
 require "language_pack"
+require "language_pack/helpers/bundle_wrapper"
 
 DEFAULT_STACK = "cedar-14"
 
 installer    = LanguagePack::Installers::HerokuRubyInstaller.new(ENV['STACK'] || DEFAULT_STACK)
 ruby_version = LanguagePack::RubyVersion.new("ruby-#{LanguagePack::RubyVersion::DEFAULT_VERSION_NUMBER}")
 installer.fetch_unpack(ruby_version, ARGV[0])
+bundler = LanguagePack::Helpers::BundlerWrapper.new
+bundler.install
